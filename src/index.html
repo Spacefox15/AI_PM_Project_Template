@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>[Project Name]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desktop Weather</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <header>
-    <h1>🚀 [Project Name]</h1>
-    <p class="subtitle">[One-line description of what this does]</p>
-  </header>
+  <!-- Dynamic Background Wrapper -->
+  <div id="app-background" class="app-background"></div>
 
-  <main>
+  <div class="glass-container">
+    <header class="top-bar">
+      <form id="location-form" class="location-form">
+        <input type="text" id="city-input" placeholder="Enter a city..." autocomplete="off" required />
+        <button type="submit" id="search-btn" aria-label="Search">🔍</button>
+      </form>
+      <button id="refresh-btn" class="icon-btn" aria-label="Refresh Data">🔄</button>
+    </header>
 
-    <!-- API Key Input -->
-    <section class="card">
-      <label for="apiKey">Anthropic API Key</label>
-      <input
-        type="password"
-        id="apiKey"
-        placeholder="sk-ant-..."
-        autocomplete="off"
-      />
-      <small>Your key is never stored or sent anywhere except the Anthropic API.</small>
-    </section>
+    <main id="weather-content" class="weather-content hidden">
+      <div id="loading-state" class="state-message hidden">Fetching weather...</div>
+      <div id="error-state" class="state-message error hidden">Failed to load weather.</div>
 
-    <!-- User Input -->
-    <section class="card">
-      <label for="userInput">[What should the user provide here?]</label>
-      <textarea
-        id="userInput"
-        rows="6"
-        placeholder="Paste your [feedback / data / ideas] here..."
-      ></textarea>
-    </section>
+      <div id="current-weather" class="current-weather">
+        <h1 id="location-name" class="location-name">--</h1>
 
-    <!-- Submit -->
-    <button id="submitBtn">✨ Analyze</button>
+        <div class="main-temperature">
+          <span id="current-temp">--</span><span class="unit">°</span>
+        </div>
 
-    <!-- Loading & Error States -->
-    <div id="loader" style="display:none;" aria-live="polite">Thinking...</div>
-    <div id="errorMsg" class="error" style="display:none;" role="alert"></div>
+        <div class="condition-label" id="weather-condition">--</div>
 
-    <!-- Output -->
-    <section id="output"></section>
+        <div class="temperature-details">
+          <div class="detail-item">
+            <span class="detail-label">Feels like</span>
+            <span class="detail-value" id="feels-like">--</span>
+          </div>
+          <div class="detail-divider"></div>
+          <div class="detail-item">
+            <span class="detail-label">High / Low</span>
+            <span class="detail-value"><span id="temp-high">--</span>° / <span id="temp-low">--</span>°</span>
+          </div>
+        </div>
+      </div>
 
-  </main>
+      <!-- Hourly Forecast Overlay -->
+      <div id="hourly-forecast" class="hourly-forecast hidden">
+        <!-- JS will populate .hourly-items here -->
+      </div>
 
-  <footer>
-    <p>Built by <a href="https://github.com/yourusername" target="_blank">Your Name</a> · 
-       <a href="https://github.com/yourusername/project-name" target="_blank">View on GitHub</a>
-    </p>
-  </footer>
+      <!-- Multi-Day Forecast Layout -->
+      <div id="daily-forecast" class="daily-forecast hidden">
+        <!-- JS will populate .daily-items here -->
+      </div>
+    </main>
+  </div>
 
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
+
 </html>

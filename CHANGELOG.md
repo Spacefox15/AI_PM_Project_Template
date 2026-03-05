@@ -6,57 +6,33 @@
 
 ## [Unreleased]
 ### Planned
-- [ ] Feature: [Next thing you're building]
-- [ ] Fix: [Known issue to address]
+- [ ] Feature: Hourly forecast (Phase 2)
+- [ ] Feature: Multi-day forecast (Phase 2)
+- [ ] Feature: Weather alerts popup (Phase 3)
+- [ ] Feature: Condition-based dynamic backgrounds (Phase 3)
 
 ---
 
-## [1.0.0] - YYYY-MM-DD — 🚀 Initial Ship
+## [0.2.0] - 2026-03-05 — Phase 1: Core Weather Widget
 
 ### Added
-- Core [main feature] functionality
-- AI analysis via Anthropic Claude API
-- File upload support (CSV up to [X] rows)
-- Export to PDF
-- Basic error handling for API failures
+- Core current conditions display (temperature, feels-like, condition, max/min)
+- Geocoding API integration (City name to Lat/Lon)
+- Open-Meteo API integration (Fixed: defaulted to Fahrenheit)
+- LocalStorage persistence for last searched city
+- 30-minute auto-refresh background timer
+- Glassmorphism dark-mode UI
+- `docs/prompts.md` for AI tracking
 
 ### Decisions Made This Sprint
-- Chose vanilla JS over React (see [DEC-002](docs/decisions.md))
-- Deferred user auth to v2 (see [DEC-004](docs/decisions.md))
+- Replaced AI PM HTML/JS template with pure Vanilla web app architecture for optimal performance (see [DEC-004](docs/decisions.md))
 
 ---
 
-## [0.3.0] - YYYY-MM-DD — Beta
-
-### Added
-- [Feature added]
-- [Feature added]
-
-### Changed
-- Switched from [X] to [Y] after testing showed [reason]
-
-### Fixed
-- [Bug fixed]
-
----
-
-## [0.2.0] - YYYY-MM-DD — First Working Prototype
-
-### Added
-- Basic UI shell
-- First successful API call returning structured output
-- Prompt v1 (see notes below)
-
-### What We Learned
-- Initial prompt returned inconsistent JSON formatting → added explicit format instructions
-- Need to handle empty input gracefully — added validation
-
----
-
-## [0.1.0] - YYYY-MM-DD — Project Kickoff
+## [0.1.0] - 2026-03-04 — Project Kickoff
 
 ### Added
 - Repo initialized
-- PRD written
-- Architecture diagrammed
-- Tech stack decided
+- PRD written (`docs/PRD.md`)
+- Architecture diagrammed (`docs/architecture.md`)
+- Tech stack decided (`docs/decisions.md`)

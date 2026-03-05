@@ -3,17 +3,14 @@
 > **One-line description of what this does and who it's for.**  
 > Example: *An AI-powered tool that helps product teams turn raw user feedback into prioritized feature ideas in under 60 seconds.*
 
-![Status](https://img.shields.io/badge/status-shipped-brightgreen)
-![Stack](https://img.shields.io/badge/stack-JS%20%7C%20SQL%20%7C%20Claude-blue)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
-
----
+---/new
 
 ## 🔍 The Problem
 
 *What pain point does this solve? Write 2–3 sentences as if explaining to a non-technical stakeholder.*
 
 Example: Product managers spend hours manually sorting through support tickets and user interviews to find patterns. This creates a bottleneck before every planning cycle and often means valuable signals get missed entirely.
+
 
 ---
 
