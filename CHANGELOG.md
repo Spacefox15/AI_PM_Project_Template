@@ -6,10 +6,20 @@
 
 ## [Unreleased]
 ### Planned
-- [ ] Feature: Hourly forecast (Phase 2)
-- [ ] Feature: Multi-day forecast (Phase 2)
 - [ ] Feature: Weather alerts popup (Phase 3)
 - [ ] Feature: Condition-based dynamic backgrounds (Phase 3)
+
+---
+
+## [0.3.0] - 2026-03-05 — Phase 2: Forecast & Polish
+
+### Added
+- Horizontal 24-hour forecast
+- Vertical 5-day multi-day forecast
+- `utils.js` for formatting and WMO icon mapping
+
+### Fixed
+- Fixed API request to explicitly return Fahrenheit.
 
 ---
 
