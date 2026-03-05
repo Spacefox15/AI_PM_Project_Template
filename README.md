@@ -131,6 +131,6 @@ npm start
 
 ## 👤 About Me
 
-Built by **[Your Name]** — an AI-focused Product Manager passionate about human-AI collaboration tools.
+Built by Paxton M. Calareso — an AI-focused Product Manager passionate about creating the next generation of technology.
 
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile) · 🐙 [GitHub](https://github.com/yourusername) · 📧 [Email](mailto:you@email.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/paxton-calareso/) · 🐙 [GitHub](https://github.com/Spacefox15) · 📧 [Email](mailto:pmcalareso@outlook.com)
